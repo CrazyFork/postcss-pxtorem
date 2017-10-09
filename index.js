@@ -96,6 +96,7 @@ function createPxReplace (rootValue, unitPrecision, minPixelValue) {
     };
 }
 
+// 先保留 precision + 1 的精度，然后floor掉 +1 的精度，再round到目标精度
 function toFixed(number, precision) {
     var multiplier = Math.pow(10, precision + 1),
     wholeNumber = Math.floor(number * multiplier);
